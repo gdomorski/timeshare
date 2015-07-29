@@ -1,3 +1,5 @@
+var myApp = angular.module('myApp', ['ui.router']);
+
 var ref = new Firebase("https://timeshare.firebaseio.com");
 var users = ref.child('users');
 
@@ -21,5 +23,3 @@ ref.on('child_added', function(snapshot, prevChildKey) {
   console.log('a new user named ' + newUser.name + ' was created');
 });
 
-
-console.log('What up')
